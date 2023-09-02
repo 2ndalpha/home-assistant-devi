@@ -1,9 +1,5 @@
 on: push
 
-defaults:
-  run:
-    working-directory: server
-
 jobs:
   build-server:
     name: Build Server
@@ -20,4 +16,5 @@ jobs:
 
       - name: Execute Gradle Task
         run: ./gradlew buildFatJar
+        working-directory: server
         shell: bash
