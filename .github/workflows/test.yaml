@@ -15,6 +15,6 @@ jobs:
           java-version: '17'
 
       - name: Execute Gradle Task
-        run: ls -alh && ./gradlew buildFatJar
+        run: ./gradlew buildFatJar
         working-directory: server
         shell: bash
