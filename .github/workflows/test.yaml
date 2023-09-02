@@ -1,0 +1,18 @@
+on: push
+jobs:
+  build-server:
+    name: Build Server
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Setup Java
+        uses: actions/setup-java@v3
+        with:
+          distribution: 'temurin'
+          java-version: '17'
+
+      - name: Execute Gradle Task
+        run: ./gradlew buildFatJar
+        shell: bash
