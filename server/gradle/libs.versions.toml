@@ -1,0 +1,7 @@
+[versions]
+kotlin = "1.8.22"
+ktor = "2.3.4"
+
+[plugins]
+kotlin-jvm = { id = "org.jetbrains.kotlin.jvm", version.ref = "kotlin" }
+ktor = { id = "io.ktor.plugin", version.ref = "ktor" }
